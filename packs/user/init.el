@@ -6,6 +6,8 @@
 
 (set-frame-font default-font nil t)
 
+(setq default-directory "~/")
+
 (require 'package)
 (add-to-list 'package-archives
   '("marmalade" . "http://marmalade-repo.org/packages/"))
