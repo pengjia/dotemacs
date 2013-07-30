@@ -9,16 +9,14 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (flyspell-prog-mode)
-            (auto-complete-mode)
+            ;;(auto-complete-mode)
+            (autopair-mode)
             (nlinum-mode)
             (setq autopair-handle-action-fns
                   (list 'autopair-default-handle-action
                         'autopair-python-triple-quote-action))
             (centered-cursor-mode)))
 
-(add-hook 'after-init-hook
-          (lambda ()
-            (autopair-global-mode)))
 
 ;; set ipython as default python shell
 (setq
