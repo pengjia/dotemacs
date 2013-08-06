@@ -6,7 +6,7 @@
 (require 'cmuscheme)
 (require 'parenface)
 
-(setq scheme-program-name "racket")
+(setq scheme-program-name "mit-scheme")
 
 
 ;; bypass the interactive question and start the default interpreter
