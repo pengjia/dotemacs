@@ -3,10 +3,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+(live-add-pack-lib "geiser")
+
+(load "geiser")
+
 (require 'cmuscheme)
 (require 'parenface)
 
-(setq scheme-program-name "mit-scheme")
+;; racket, mit-scheme
+(setq scheme-program-name "racket")
 
 
 ;; bypass the interactive question and start the default interpreter
@@ -56,7 +61,15 @@
   (paredit-mode 1)
   (set-face-foreground 'paren-face "DimGray")
   (define-key scheme-mode-map (kbd "<f5>") 'scheme-send-last-sexp-split-window)
-  (define-key scheme-mode-map (kbd "<f6>") 'scheme-send-definition-split-window))
+  (define-key scheme-mode-map (kbd "<f6>") 'scheme-send-definition-split-window)
+)
 
 
 (add-hook 'scheme-mode-hook 'my-scheme-hook)
+(add-hook 'geiser-repl-mode 'enable-paredit-mode)
+
+(eval-after-load 'geiser
+                 '(progn
+                        (setq scheme-program-nam "/usr/bin/racket")
+                        (setq geiser-racket-binary "/usr/bin/racket")
+                        (setq geiser-active-implementations '(racket))))
