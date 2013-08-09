@@ -2,7 +2,7 @@
 (setq user-mail-address "peter.pengjia@gmail.com")
 
 ;;; change this according to your needs
-(defvar default-font "Anonymous Pro-14" "My default Emacs font.")
+(defvar default-font "Anonymous Pro-18" "My default Emacs font.")
 
 (set-frame-font default-font nil t)
 
