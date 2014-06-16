@@ -6,7 +6,7 @@
 
 (set-frame-font default-font nil t)
 
-(setq default-directory "~/Code")
+(setq default-directory "~/code")
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
