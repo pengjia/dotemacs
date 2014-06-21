@@ -18,3 +18,5 @@
 
 (when (eq system-type 'darwin)
   (live-load-config-file "osx.el"))
+(when (eq system-type 'gnu/linux)
+  (live-load-config-file "linux.el"))
